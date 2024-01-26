@@ -1,7 +1,7 @@
-import { publicProcedure, router } from "./trpc"
+import { protectedProcedure, publicProcedure, router } from "./trpc"
 
 export const moviesRouter = router({
-    helloworld: publicProcedure.query(() => {
+    helloworld: protectedProcedure.query(() => {
         return "hello, world";
     })
 })
